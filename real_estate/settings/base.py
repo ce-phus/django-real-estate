@@ -43,7 +43,7 @@ THIRD_PARTY_APPS=[
     "phonenumber_field",
 ]
 
-LOCAL_APPS= ["apps.common", "apps.users","apps.profiles", "apps.ratings"]
+LOCAL_APPS= ["apps.common", "apps.users", "apps.profiles", "apps.ratings"]
 
 INSTALLED_APPS= DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
