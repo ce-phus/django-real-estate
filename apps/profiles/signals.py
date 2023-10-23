@@ -5,7 +5,7 @@ from real_estate.settings.base import AUTH_USER_MODEL
 from apps.profiles.models import Profile
 
 logger = logging.getLogger(__name__)
-# we are going to create a post save sgnal when a user is created
+# we are going to create a post save signal when a user is created
 @receiver(post_save, sender=AUTH_USER_MODEL)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
