@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 set -o errexit
 
@@ -16,7 +16,8 @@ try:
         user="${POSTGRES_USER}",
         password="${POSTGRES_PASSWORD}",
         host="${PG_HOST}",
-        port='${PG_PORT}",
+        port="${PG_PORT}",
+
     )
 except psycopg2.OperationalError:
     sys.exit(-1)
@@ -25,8 +26,8 @@ END
 }
 
 until postgres_ready; do
-    >&2 echo "Waiting for PostgreSQL to become available...:-("
-    sleep 1
+ >&2 echo "Waiting for PostgreSQL to become available....:-("
+ sleep 1
 done
 >&2 echo "PostgreSQL is ready!!!!...:-)"
 
