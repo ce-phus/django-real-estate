@@ -25,6 +25,7 @@ RUN apt-get update \
 
 RUN pip3 install --upgrade pip
 RUN pip3 install black==22.3.0
+RUN pip3 install click==8.0.4
 
 COPY ./requirements.txt /app/requirements.txt 
 RUN pip3 install -r requirements.txt

@@ -7,6 +7,7 @@ from .models import Profile
 from .renderers import ProfileJSONRenderer
 from .serializers import ProfileSerializer, UpdateProfileSerializer
 
+
 class AgentListAPIView(generics.ListAPIView):
     permissions_classes= [permissions.IsAuthenticated]
     queryset= Profile.objects.filter(is_agent=True)
