@@ -44,6 +44,7 @@ estate-db:
 # testing our application, gets a report on the terminal
 test:
 	sudo docker compose exec api pytest -p no:warnings --cov=.
+	export DJANGO_SETTINGS_MODULE=real_estate.settings
 
 # generating an html for our test application
 test-html:

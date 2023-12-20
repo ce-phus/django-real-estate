@@ -1,6 +1,7 @@
 
 from pathlib import Path
 
+
 import environ
 
 env =environ.Env(
@@ -49,6 +50,8 @@ THIRD_PARTY_APPS=[
 LOCAL_APPS= ["apps.common", "apps.users", "apps.profiles", "apps.ratings", "apps.enquiries", "apps.properties"]
 
 INSTALLED_APPS= DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
