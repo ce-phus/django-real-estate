@@ -1,4 +1,4 @@
-import {combineReducers} from "redux"
+import { combineReducers } from "redux"
 import {propertiesListReducer} from "./propertyReducers"
 
 export default combineReducers({

@@ -1,6 +1,7 @@
-export const propertiesListReducer= (state={properties:[]},action=>{
+export const propertiesListReducer= (state = { properties:[] },action)=>
+    {
     switch (action.type){
         default:
-            return state;
+            return state 
         }
-    })
+    }
