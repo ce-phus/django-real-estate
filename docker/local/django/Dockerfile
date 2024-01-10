@@ -1,7 +1,7 @@
 FROM python:3.8-buster
 ENV APP_HOME=/app
 RUN mkdir $APP_HOME
-RUN mkdir $APP_HOME/staticfiles
+# RUN mkdir $APP_HOME/staticfiles
 WORKDIR $APP_HOME
 
 
@@ -46,6 +46,8 @@ RUN chmod +x /start-celeryworker
 COPY ./docker/local/django/celery/flower/start /start-flower
 RUN sed -i 's/\r$//g' /start-flower
 RUN chmod +x /start-flower
+
+COPY ./real_estate/staticfiles ./staticfiles
 
 
 

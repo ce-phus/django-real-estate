@@ -7,7 +7,8 @@ services:
       dockerfile: ./docker/local/django/Dockerfile
     command: /start
     volumes:
-      - .:/app
+      - ./:/app
+      # - ./real_estate/staticfiles:/app/staticfiles
       - static_volume:/app/staticfiles
       - media_volume:/app/mediafiles
     expose:
